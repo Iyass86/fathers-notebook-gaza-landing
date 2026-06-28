@@ -72,7 +72,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#B45B5B]/15 to-transparent rounded-lg blur-2xl"></div>
                 <img
-                  src="/manus-storage/book-cover_f9ad6afa.webp"
+                  src="/images/card-1.webp"
                   alt="A Father's Notebook from Gaza"
                   className="w-full max-w-sm rounded-lg shadow-xl relative z-10"
                 />
