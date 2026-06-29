@@ -44,9 +44,9 @@ export default function Home() {
                 <div className="relative mx-auto max-w-xs">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#B45B5B]/15 to-transparent rounded-lg blur-2xl"></div>
                   <img
-                    src="/images/card-1.webp"
+                    src="/images/book-cover-main.png"
                     alt="A Father's Notebook from Gaza"
-                    className="w-full rounded-lg shadow-xl relative z-10"
+                    className="w-full rounded-lg shadow-xl relative z-10 object-contain"
                   />
                   <div className="absolute bottom-4 left-4 bg-[#B45B5B] text-[#FFF8F2] px-3 py-1.5 rounded text-xs font-semibold">
                     Digital PDF Edition
@@ -98,9 +98,9 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#B45B5B]/15 to-transparent rounded-lg blur-2xl"></div>
                 <img
-                  src="/images/card-1.webp"
+                  src="/images/book-cover-main.png"
                   alt="A Father's Notebook from Gaza"
-                  className="w-full max-w-sm rounded-lg shadow-xl relative z-10"
+                  className="w-full max-w-sm rounded-lg shadow-xl relative z-10 object-contain"
                 />
                 <div className="absolute bottom-4 left-4 bg-[#B45B5B] text-[#FFF8F2] px-3 py-1.5 rounded text-xs font-semibold">
                   Digital PDF Edition
