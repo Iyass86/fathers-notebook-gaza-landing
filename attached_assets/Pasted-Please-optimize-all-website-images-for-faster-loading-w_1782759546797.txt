@@ -1,0 +1,64 @@
+Please optimize all website images for faster loading without changing the design, layout, text, colors, or user experience.
+
+Goal:
+Improve page loading speed, especially on mobile, by reducing image file sizes and using modern optimized formats.
+
+Important rules:
+
+1. Do not change the design, layout, spacing, typography, colors, text, buttons, Gumroad links, or visual identity.
+2. Do not replace images with different artwork.
+3. Keep the same visual appearance as much as possible.
+4. Optimize images safely and preserve good visual quality.
+5. Do not break desktop or mobile layout.
+6. Do not change publicDir; it must remain "dist".
+7. Do not republish automatically unless I approve.
+
+Image optimization tasks:
+
+1. Inspect all images used on the landing page.
+2. Identify large/heavy images, especially:
+
+   * the main book cover image
+   * hero image
+   * sample card images
+   * any large PNG/JPG/WebP assets
+3. Convert heavy images to optimized WebP format.
+4. If AVIF is supported easily, generate AVIF versions too, but keep WebP as fallback.
+5. Resize images to the maximum size actually needed on the site:
+
+   * main hero cover should not use the original full-resolution file if it displays much smaller
+   * sample cards should use optimized display-size versions
+6. Create responsive image sizes where useful:
+
+   * mobile version
+   * desktop version
+7. Use srcset / picture elements if appropriate, especially for the hero cover.
+8. Add explicit width and height attributes or CSS aspect-ratio where needed to reduce layout shift.
+9. Add loading="lazy" to images below the fold.
+10. Do NOT lazy-load the main hero image. It should load quickly because it is above the fold.
+11. For the main hero image:
+
+* use fetchpriority="high" if appropriate
+* preload it if it improves first-load performance
+* keep object-fit: contain so the cover is not cropped
+
+12. Ensure all image paths work in development and production build.
+13. Remove unused huge image files only if they are definitely not referenced anywhere.
+14. Run npm run build and confirm it succeeds.
+15. After build, summarize:
+
+* which images were optimized
+* old approximate sizes vs new sizes if possible
+* whether WebP/AVIF was added
+* whether lazy loading was applied
+* whether the hero image is prioritized correctly
+
+Expected result:
+
+* Page loads faster on mobile and desktop.
+* Main cover appears quickly.
+* No broken images.
+* No visible quality loss.
+* Desktop remains visually unchanged.
+* Mobile remains visually unchanged except faster loading.
+* npm run build succeeds.

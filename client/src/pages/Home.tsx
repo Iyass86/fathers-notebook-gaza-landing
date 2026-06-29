@@ -43,11 +43,17 @@ export default function Home() {
               <div className="block lg:hidden flex justify-center">
                 <div className="relative mx-auto max-w-xs">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#B45B5B]/15 to-transparent rounded-lg blur-2xl"></div>
-                  <img
-                    src="/images/book-cover-main.png"
-                    alt="A Father's Notebook from Gaza"
-                    className="w-full rounded-lg shadow-xl relative z-10 object-contain"
-                  />
+                  <picture>
+                    <source srcSet="/images/book-cover-mobile.webp" type="image/webp" />
+                    <img
+                      src="/images/book-cover-main.png"
+                      alt="A Father's Notebook from Gaza"
+                      width="360"
+                      height="540"
+                      fetchPriority="high"
+                      className="w-full rounded-lg shadow-xl relative z-10 object-contain"
+                    />
+                  </picture>
                   <div className="absolute bottom-4 left-4 bg-[#B45B5B] text-[#FFF8F2] px-3 py-1.5 rounded text-xs font-semibold">
                     Digital PDF Edition
                   </div>
@@ -97,11 +103,17 @@ export default function Home() {
             <div className="hidden lg:flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#B45B5B]/15 to-transparent rounded-lg blur-2xl"></div>
-                <img
-                  src="/images/book-cover-main.png"
-                  alt="A Father's Notebook from Gaza"
-                  className="w-full max-w-sm rounded-lg shadow-xl relative z-10 object-contain"
-                />
+                <picture>
+                  <source srcSet="/images/book-cover-desktop.webp" type="image/webp" />
+                  <img
+                    src="/images/book-cover-main.png"
+                    alt="A Father's Notebook from Gaza"
+                    width="520"
+                    height="780"
+                    fetchPriority="high"
+                    className="w-full max-w-sm rounded-lg shadow-xl relative z-10 object-contain"
+                  />
+                </picture>
                 <div className="absolute bottom-4 left-4 bg-[#B45B5B] text-[#FFF8F2] px-3 py-1.5 rounded text-xs font-semibold">
                   Digital PDF Edition
                 </div>
@@ -148,22 +160,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Card 1 */}
             <div className="rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img src="/images/card-1.webp" alt="The Rain, the Father, and the Book" className="w-full h-auto" />
+              <img src="/images/card-1.webp" alt="The Rain, the Father, and the Book" className="w-full h-auto" loading="lazy" width="800" height="1067" />
             </div>
 
             {/* Card 2 */}
             <div className="rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img src="/images/card-2.webp" alt="A Child's Wish in the Tent" className="w-full h-auto" />
+              <img src="/images/card-2.webp" alt="A Child's Wish in the Tent" className="w-full h-auto" loading="lazy" width="800" height="1067" />
             </div>
 
             {/* Card 3 */}
             <div className="rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img src="/images/card-3.webp" alt="Children and Women Before the Bakery" className="w-full h-auto" />
+              <img src="/images/card-3.webp" alt="Children and Women Before the Bakery" className="w-full h-auto" loading="lazy" width="800" height="1067" />
             </div>
 
             {/* Card 4 */}
             <div className="rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img src="/images/card-4.webp" alt="Life of Survival, Not Adaptation" className="w-full h-auto" />
+              <img src="/images/card-4.webp" alt="Life of Survival, Not Adaptation" className="w-full h-auto" loading="lazy" width="800" height="1067" />
             </div>
           </div>
 
