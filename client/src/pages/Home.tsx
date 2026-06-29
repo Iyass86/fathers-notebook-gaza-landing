@@ -25,11 +25,11 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 lg:py-20">
+      <section className="pt-10 pb-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column */}
-            <div className="space-y-6">
+            <div className="space-y-5 lg:space-y-6">
               <div className="space-y-3">
                 <h1 className="text-4xl lg:text-5xl font-serif font-bold text-[#2E2A28] leading-tight">
                   For three years, I wrote what the cameras could not carry.
@@ -39,23 +39,49 @@ export default function Home() {
                 </p>
               </div>
 
+              {/* Mobile-only: book cover right after headline */}
+              <div className="block lg:hidden flex justify-center">
+                <div className="relative mx-auto max-w-xs">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#B45B5B]/15 to-transparent rounded-lg blur-2xl"></div>
+                  <img
+                    src="/images/card-1.webp"
+                    alt="A Father's Notebook from Gaza"
+                    className="w-full rounded-lg shadow-xl relative z-10"
+                  />
+                  <div className="absolute bottom-4 left-4 bg-[#B45B5B] text-[#FFF8F2] px-3 py-1.5 rounded text-xs font-semibold">
+                    Digital PDF Edition
+                  </div>
+                </div>
+              </div>
+
               <p className="text-lg text-[#6F655C] leading-relaxed">
                 A bilingual digital literary notebook about family, memory, displacement, and dignity — written from inside nearly three years of lived experience.
               </p>
 
-              <div className="pt-2 space-y-4">
+              <div className="pt-1 space-y-4">
                 <div>
                   <p className="text-sm text-[#6F655C]">Arabic & English · PDF Edition · Instant Access</p>
                   <p className="text-3xl font-bold text-[#B45B5B] mt-2">$29.99</p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                {/* Desktop CTA — unchanged */}
+                <div className="hidden sm:flex flex-row gap-3">
                   <Button asChild size="lg" className="bg-[#B86161] hover:bg-[#A55353] text-[#FFF8F2]">
                     <a href="#inside-book">View Preview</a>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="border-[#B45B5B] text-[#B45B5B] hover:bg-[#EAE2D3]">
                     <a href={GUMROAD_URL} target="_blank" rel="noopener noreferrer">Get the Digital Edition — $29.99</a>
                   </Button>
+                </div>
+
+                {/* Mobile CTA — primary buy button first, view preview secondary */}
+                <div className="flex sm:hidden flex-col gap-3">
+                  <Button asChild size="lg" className="bg-[#B86161] hover:bg-[#A55353] text-[#FFF8F2] w-full">
+                    <a href={GUMROAD_URL} target="_blank" rel="noopener noreferrer">Get the Digital Edition — $29.99</a>
+                  </Button>
+                  <a href="#inside-book" className="text-center text-sm text-[#6F655C] hover:text-[#B45B5B] underline underline-offset-2 transition">
+                    View Preview
+                  </a>
                 </div>
 
                 <p className="text-xs text-[#6F655C]">
@@ -67,8 +93,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column - Book Cover */}
-            <div className="flex justify-center lg:justify-end">
+            {/* Right Column - Book Cover (desktop only) */}
+            <div className="hidden lg:flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#B45B5B]/15 to-transparent rounded-lg blur-2xl"></div>
                 <img
